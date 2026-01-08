@@ -23,6 +23,14 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
         {/* Overlay */}
         <div className="image-overlay" />
 
+        {/* Verified Badge */}
+        <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 shadow-lg">
+          <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+          </svg>
+          <span className="text-xs font-semibold text-white">Проверено</span>
+        </div>
+
         {/* Online Indicator */}
         {profile.isOnline && (
           <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-sm">
